@@ -1,0 +1,86 @@
+#include "ball.h"
+
+Ball::Ball() :  ballVelocity(0.0f),
+                ballAceleration(0.5f),
+                ballFriction(0.5f),
+                ballDirection(0.0f)
+{
+
+
+
+
+}
+
+Ball::~Ball(){
+
+
+
+
+
+
+}
+
+void Ball::create(){
+
+    ballPosition.x = 400;
+    ballPosition.y = 300;
+
+    ballBounds.left = 0;
+    ballBounds.top = 0;
+    ballBounds.width = 16;
+    ballBounds.height = 16;
+
+    ballTexture.loadFromFile("data/imgs/ball.png", ballBounds);
+    ballTexture.setSmooth(true);
+
+    ballSprite.setTexture(ballTexture);
+    ballSprite.setOrigin(8,8);
+
+    ballDirection = (rand() % 360 + 0) + ( (rand() % 99 + 0) /100 );
+
+
+}
+
+void Ball::update(){
+
+    ballVelocity += ballAceleration - (ballFriction*ballVelocity);
+
+
+
+
+    if( !(ballPosition.x > 0 && ballPosition.y > 0 && ballPosition.x< 1024 && ballPosition.y < 768) ){
+
+        ballDirection += (rand() % 225 + 135);
+
+    }
+
+
+    if(ballDirection > 360){
+        ballDirection -=360;
+    }
+
+    if(ballPosition.x-(ballVelocity * cos(ballDirection))-8 < 0){ballPosition.x = 0+8+(ballVelocity * cos(ballDirection));}else if(ballPosition.x+(ballVelocity * cos(ballDirection))+8 > 1024){ ballPosition.x = 1024-8-(ballVelocity * cos(ballDirection));}
+    if(ballPosition.y-(ballVelocity * sin(ballDirection))-8 < 0){ballPosition.y = 0+8+(ballVelocity * sin(ballDirection));}else if(ballPosition.y+(ballVelocity * sin(ballDirection))+8  > 768){ ballPosition.y = 768-8-(ballVelocity * sin(ballDirection));}
+
+    ballPosition.x += ballVelocity * cos(ballDirection);
+    ballPosition.y += ballVelocity * sin(ballDirection);
+
+
+
+    ballSprite.setPosition(ballPosition);
+    cout << ballPosition.x << " " << ballPosition.y << " " << ballDirection <<  endl;
+}
+
+void Ball::draw(sf::RenderWindow* window){
+
+
+    window->draw(ballSprite);
+
+}
+
+int Ball::checkCollision(){
+
+
+    return 0;
+
+}

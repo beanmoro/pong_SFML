@@ -1,0 +1,71 @@
+# depslib dependency file v1.0
+1470070443 source:c:\users\benjamin\dropbox\programacion\pingpong\main.cpp
+	"game.h"
+
+1470092671 source:c:\users\benjamin\dropbox\programacion\pingpong\game.cpp
+	"game.h"
+
+1470092656 c:\users\benjamin\dropbox\programacion\pingpong\game.h
+	"includes.h"
+	"pad.h"
+	"ball.h"
+
+1470080168 c:\users\benjamin\dropbox\programacion\pingpong\includes.h
+	<SFML/Graphics.hpp>
+	<SFML/Window.hpp>
+	<SFML/System.hpp>
+	<iostream>
+	<stdio.h>
+	<math.h>
+	<stdlib.h>
+	<time.h>
+	<vector>
+
+1470092301 source:c:\users\benjamin\dropbox\programacion\pingpong\pad.cpp
+	"pad.h"
+
+1470091235 c:\users\benjamin\dropbox\programacion\pingpong\pad.h
+	"includes.h"
+
+1470099789 c:\users\benjamin\dropbox\programacion\pingpong\ball.h
+	"includes.h"
+	"pad.h"
+
+1470095424 source:c:\users\benjamin\dropbox\programacion\pingpong\ball.cpp
+	"ball.h"
+
+1470183815 source:c:\users\benjamin\dropbox\programacion\proyectos\pingpong\ball.cpp
+	"ball.h"
+
+1470181514 c:\users\benjamin\dropbox\programacion\proyectos\pingpong\ball.h
+	"includes.h"
+	"pad.h"
+
+1470080168 c:\users\benjamin\dropbox\programacion\proyectos\pingpong\includes.h
+	<SFML/Graphics.hpp>
+	<SFML/Window.hpp>
+	<SFML/System.hpp>
+	<iostream>
+	<stdio.h>
+	<math.h>
+	<stdlib.h>
+	<time.h>
+	<vector>
+
+1470181618 c:\users\benjamin\dropbox\programacion\proyectos\pingpong\pad.h
+	"includes.h"
+
+1470182035 source:c:\users\benjamin\dropbox\programacion\proyectos\pingpong\game.cpp
+	"game.h"
+
+1470181995 c:\users\benjamin\dropbox\programacion\proyectos\pingpong\game.h
+	"includes.h"
+	"pad.h"
+	"ball.h"
+
+1470070443 source:c:\users\benjamin\dropbox\programacion\proyectos\pingpong\main.cpp
+	"game.h"
+
+1470184084 source:c:\users\benjamin\dropbox\programacion\proyectos\pingpong\pad.cpp
+	"pad.h"
+
